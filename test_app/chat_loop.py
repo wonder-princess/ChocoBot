@@ -31,7 +31,7 @@ def main():
         # OpenAIに問い合わせ
         try:
             response = client.chat.completions.create(
-                model="gpt-5.1-mini",
+                model="gpt-4o-mini",
                 messages=messages,
             )
         except Exception as e:

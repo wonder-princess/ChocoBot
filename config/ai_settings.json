@@ -1,0 +1,8 @@
+{
+  "openai": {
+    "model": "gpt-4o-mini",
+    "temperature": 0.7,
+    "max_tokens": 512,
+    "system_prompt": "あなたは日本語で丁寧かつ簡潔に回答するアシスタントです。専門的な内容は箇条書きで整理して説明してください。"
+  }
+}
