@@ -58,5 +58,4 @@ def load_openai_settings() -> OpenAISettings:
         max_turns=max_turns,
     )
 
-
 OPENAI_SETTINGS = load_openai_settings()
