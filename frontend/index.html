@@ -1,20 +1,50 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>ChocoBot</title>
-  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="stylesheet" href="/static/styles.css" />
 </head>
 <body>
-  <div class="chat-container">
+  <div class="app-container">
     <h1>ChocoBot</h1>
-    <div id="chat-window"></div>
 
-    <form id="chat-form">
-      <input id="user-input" type="text" autocomplete="off" placeholder="メッセージを入力…">
-      <button type="submit">送信</button>
-    </form>
+    <!-- モード選択タブ -->
+    <div class="mode-tabs">
+      <button id="tab-chat" class="tab active">通常チャット</button>
+      <button id="tab-duet" class="tab">Bot デュエット</button>
+    </div>
+
+    <!-- 通常チャット UI -->
+    <div id="view-chat" class="view active">
+      <div id="chat-window" class="panel"></div>
+      <form id="chat-form" class="form-row">
+        <input
+          id="user-input"
+          type="text"
+          placeholder="メッセージを入力..."
+          autocomplete="off"
+        />
+        <button type="submit">送信</button>
+      </form>
+    </div>
+
+    <!-- デュエット UI -->
+    <div id="view-duet" class="view">
+      <div class="form-row">
+        <input
+          id="duet-topic-input"
+          type="text"
+          placeholder="デュエットのテーマを入力..."
+          autocomplete="off"
+        />
+        <button id="duet-start-btn" type="button">デュエット開始</button>
+      </div>
+      <div id="duet-topic" class="duet-topic"></div>
+      <div id="duet-output" class="panel"></div>
+    </div>
   </div>
+
   <script src="/static/app.js"></script>
 </body>
 </html>

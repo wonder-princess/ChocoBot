@@ -6,9 +6,8 @@ router = APIRouter(prefix="/api", tags=["chat"])
 
 
 @router.post("/chat", response_model=ChatResponse)
-async def chat_endpoint(payload: ChatRequest):
+async def chat_endpoint(payload: ChatRequest) -> ChatResponse:
     history_dicts = [m.model_dump() for m in payload.history]
-
     ai_reply = call_openai_chat(history_dicts, payload.message)
 
     new_history = payload.history + [

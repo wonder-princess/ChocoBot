@@ -1,0 +1,19 @@
+プロパティ一覧
+model	モデル名	◎
+messages	チャット履歴	◎
+temperature	創造性	◎
+top_p	確率の絞り込み	○
+max_tokens	最大出力トークン数	◎
+frequency_penalty	繰り返し抑制	△
+presence_penalty	新語の導入促進	△
+stop	停止文字列	○
+n	複数候補生成	△
+stream	ストリーミング出力	○
+tools	ツール定義（function呼び出し）	◎
+tool_choice	ツール選択制御	◎
+logprobs	トークン確率を返す	△
+top_logprobs	上位確率返す	△
+parallel_tool_calls	複数ツールの並列呼び出し	△（特殊用途）
+response_format	JSONでの応答を強制	◎
+user	エンドユーザーID	○
+seed	ランダム性の固定	◎（再現性が必要な場合）
